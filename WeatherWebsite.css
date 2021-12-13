@@ -79,7 +79,7 @@ body {
 }
 
 .contentDiv {
-  background-color:#339989;
+  background-color:#90e0ef;
   grid-area:content;
   display: grid;
   position:relative;
@@ -90,13 +90,13 @@ body {
 }
 
 .footerDiv {
-  /* background-color:#2B2C28; */
   background-color:#012a4a;
   grid-area:footer;
   display: flex;
   position:relative;
   margin:0;
   height:12vh;
+  bottom: 0;
 }
 
 #boxContainer {
@@ -148,6 +148,9 @@ body {
   height:50%;
 }
 
+.clear {
+    clear:both;
+}
 
 @media (min-device-width : 375px){
   #boxContainer {
@@ -162,15 +165,26 @@ body {
     margin:0;
     height: 100%;
   }
-  .contentDiv {
-    height: 1750px;
+  body {
+    display:block;
   }
+  .contentDiv {
+    /* height: 1750px; */
+    height: 100%;
+  }
+
   .menuDiv {
     justify-content:space-around;
     align-items:center;
     flex-direction:row;
     height: 75px;
     font-size:16px;
+  }
+  .footerDiv {
+    background-color:#012a4a;
+    position:relative;
+    height:12vh;
+    bottom:0px;
   }
 }
 
