@@ -48,8 +48,8 @@ function descriptionWeather(backgroundName, value) {
   }
 }
 
-let boxCount = 3;
-let boxNames = ["Houston", "London", "Tokyo"];
+let boxNames = ["Houston", "London", "Tokyo", "California", "Moscow"];
+let boxCount = boxNames.length;
 function updateInfo(name) {
   let buttonUnit = document.getElementById("switchUnitButton").innerHTML;
   for (let i = 0; i < boxCount; i++) {
@@ -77,7 +77,8 @@ function updateInfo(name) {
           "justify-content" : "center",
           "text-align" : "center",
           "background-size" : "cover",
-          "flex-direction" : "column"
+          "flex-direction" : "column",
+          "height" : "35vh"
         });
       });
     }
