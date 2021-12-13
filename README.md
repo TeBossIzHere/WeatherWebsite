@@ -1,2 +1,2 @@
-# TimeWebsite
-World Clock website using HTML/CSS/JS/JQ
+# WeatherWebsite
+World Weather website using HTML/CSS/JS/JQ
