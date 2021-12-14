@@ -2,12 +2,12 @@
 <html>
 <!--
   TO DO LIST:
-    1. FIX MEDIA QUERIES FOR THE SIZE OF SCREENS
     2. ADD FEATURE TO ADD NEW CITIES
  -->
+
 <head>
 	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta charset="UTF-8">
 	<meta name="description" content="HTML/CSS/JS Weather Data Website by Muzaffer Ozen.">
 	<meta name="keywords" content="Weather, weatherdata,weatherproject,weatherdataproject,weatherdatawebsite,weaterhwebsite">
@@ -16,8 +16,12 @@
 	<title>Weather Data Website</title>
 
 	<link href="/style.css" rel="stylesheet" type="text/css" />
-	<script src="/script.js" defer></script>
-	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	<script src="/script.js" defer>
+
+	</script>
+	<script src="https://code.jquery.com/jquery-3.5.0.js">
+
+	</script>
 </head>
 
 <body>
@@ -25,7 +29,17 @@
 	<div class="headerDiv">
 		<img  id="imgHeader"src="https://i.imgur.com/gSxkIpJ_d.webp?maxwidth=760&fidelity=grand" id="earthImgHeader">
       <h1 id="titleHeader">WEATHER</h1>
-      <button id="switchUnitButton" onclick="switchUnitFunction()"></button>
+  </div>
+
+  <div id ="Settings">
+    <div id="settingsHeader">
+      <div id="settingsTitle" style="margin-left:10px;">Settings</div>
+      <button id="close-button" onclick="closeSettings()">&times;</button>
+    </div>
+    <div id="settingsContent">
+      <div id="switchUnitButton" onclick="switchUnitFunction()"></div>
+      <div id="addCityButton" onclick="addCityFunction()">Add City</div>
+    </div>
   </div>
 
   <section id="container">
@@ -33,7 +47,7 @@
         <div id="Channel"onclick="wcButton()"><p><b>CHANNEL</b></p></div>
         <div id="Forecast"onclick="ufButton()"><p><b>FORECASTS</b></p></div>
         <div id="Safety" onclick="sButton()"><p><b>SAFETY</b></p></div>
-        <div id="Types" onclick="towButton()"><p><b>OTHER</b></p></div>
+        <div class="settingsMenu" onclick="openSettings()"><p><b>SETTINGS</b></p></div>
       </div>
 
       <div class="contentDiv">
@@ -41,14 +55,16 @@
           </div>
         </div>
     </section>
-
+    
     <div class="footerDiv">
   		<img src="https://i.imgur.com/gSxkIpJ_d.webp?maxwidth=760&fidelity=grand" id="earthImgFooter">
       <img src="https://i.imgur.com/0hmNIqq_d.webp?maxwidth=760&fidelity=grand" id="linkedinImg" onclick="linkedinButton()">
-
       <h1 id="footerName">WEATHER</h1>
-        <p id="copyrightFooter">@2022 WeatherApp, M.O. All Rights Reserved.</p>
+      <p id="copyrightFooter">@2022 WeatherApp, M.O. All Rights Reserved.</p>
     </div>
+    <div id="overlay"></div>
   </body>
+
+
   
 </html>
