@@ -40,11 +40,18 @@ body {
 
 #switchUnitButton {
   padding:10px;
-  margin-left:35px;
-  border-radius:30%;
   background-color:#468faf;
   color:#caf0f8;
-  opacity: 70%;
+  border:none;
+  margin-bottom:5px;
+  margin-top:15px;
+}
+
+#addCityButton {
+  padding:10px;
+  background-color:#468faf;
+  color:#caf0f8;
+
   border:none;
 }
 
@@ -61,6 +68,7 @@ body {
   /* left:50%; */
   font-size:65px;
   margin:0;
+  margin-right:35px;
 }
 
 .menuDiv {
@@ -151,6 +159,62 @@ body {
   height:50%;
 }
 
+#Settings {
+  position:fixed;
+  background-color:#ade8f4;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  width: 250px;
+  height: 300px;
+  border: 1px solid black;
+  z-index:10;
+  margin:0;
+}
+
+#Settings.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#settingsHeader {
+  text-align:center;
+  display:flex;
+  background-color:#012a4a;
+  color:#caf0f8;
+  height: 50px;
+  top: 2px;
+  align-items:center;
+}
+
+#close-button {
+  position:absolute;
+  right:5px;
+  top:8px;
+  border-radius:5px;
+  background-color:#ade8f4 ;
+  color:black;
+  font-weight: bold;
+  font-size:1.25rem;
+}
+
+#overlay {
+  position: fixed;
+  opacity:0;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:rgba(0,0,0,.5);
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
 @media (min-device-width : 375px){
   #boxContainer {
     grid-template-areas: 
@@ -227,7 +291,7 @@ body {
   }
 
   .contentDiv {
-    height:100vh;
+    height:100%;
   }
 
   .footerDiv {
@@ -273,7 +337,7 @@ body {
   .contentDiv {
     margin-left: 0;
     top:0;
-    height: 100vh;
+    height: 100%;
   }
   .footerDiv {
     height:12vh;
