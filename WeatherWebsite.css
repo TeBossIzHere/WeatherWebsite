@@ -39,19 +39,36 @@ body {
 }
 
 #switchUnitButton {
+  display: flex;
+  justify-content:center;
+  align-items:center;
   padding:10px;
   background-color:#468faf;
   color:#caf0f8;
   border:none;
   margin-bottom:5px;
   margin-top:15px;
+  height: 30px;
+}
+
+#clearCache {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  padding:10px;
+  background-color:#468faf;
+  color:#caf0f8;
+  border:none;
+  height: 50px;
+  margin: 5px;
+  margin-left:0;
+  width: 100%;
 }
 
 #addCityButton {
   padding:10px;
   background-color:#468faf;
   color:#caf0f8;
-
   border:none;
 }
 
@@ -82,7 +99,18 @@ body {
   justify-content:space-around;
   font-size:20px;
   bottom:0;
-  margin:0;
+  margin:10px;
+  margin-left:0;
+}
+
+#Channel, #Forecast, #Safety, #settingsMenu {
+  display:flex;
+  background-color:rgba(42, 111, 151, 0.35);
+  padding:10px;
+  border-radius:18px;
+  width:150px;
+  align-items:center;
+  justify-content:center;
 }
 
 #container {
@@ -99,6 +127,7 @@ body {
   padding:0;
   grid-template-columns: 1fr;
 }
+
 
 .footerDiv {
   background-color:#012a4a;
@@ -244,6 +273,9 @@ body {
     align-items:center;
     flex-direction:row;
     height: 75px;
+    margin-top:0;
+    margin-bottom:0;
+    padding:10px;
     font-size:16px;
     zoom:0.7;
   }
@@ -286,8 +318,11 @@ body {
     flex-direction: row;
     justify-content:space-around;
     align-items:center;
-    height:10vh;
-    zoom:1;
+    height:12vh;
+    margin-top:0;
+    margin-bottom:0;
+    padding:10px;
+    zoom:0.7;
   }
 
   .contentDiv {
@@ -296,6 +331,7 @@ body {
 
   .footerDiv {
     height:15vh;
+    width:100%;
   }
 
   #linkedinImg {
@@ -311,42 +347,4 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-}
-
-@media (min-width:1025px) {
-  body {
-    grid-template-areas:
-      "header header"
-      "menu content"
-      "footer footer";
-  }
-  .headerDiv {
-    height: 12vh;
-    zoom:1;
-  }
-  .menuDiv {
-    width: 15%;
-    height: 100vh;
-    float: left;
-    flex-direction:column;
-    justify-content:space-around;
-    align-items:center;
-    max-width:150px;
-    zoom:1;
-  }
-  .contentDiv {
-    margin-left: 0;
-    top:0;
-    height: 100%;
-  }
-  .footerDiv {
-    height:12vh;
-  }
-  #linkedinImg {
-    position: absolute;
-    top:30%;
-    right:25px;
-    width:50px;
-    height:50%;
-  }
 }
