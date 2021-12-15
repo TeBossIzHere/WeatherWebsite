@@ -2,6 +2,7 @@
 <html>
 <!--
   TO DO LIST:
+    1. FIX MEDIA QUERIES FOR THE SIZE OF SCREENS
     2. ADD FEATURE TO ADD NEW CITIES
  -->
 
@@ -38,7 +39,11 @@
     </div>
     <div id="settingsContent">
       <div id="switchUnitButton" onclick="switchUnitFunction()"></div>
-      <div id="addCityButton" onclick="addCityFunction()">Add City</div>
+      <div style="display:flex;height:50px;">
+        <input id="newCityInput" placeholder='City or Country Name' style="color:black;"></input>
+        <button id="addCityButton" onclick="addCityFunction()">Add Place</button>
+      </div>
+      <button id="clearCache" onclick="clearCacheFunction()">Clear Cache</button>
     </div>
   </div>
 
@@ -47,13 +52,12 @@
         <div id="Channel"onclick="wcButton()"><p><b>CHANNEL</b></p></div>
         <div id="Forecast"onclick="ufButton()"><p><b>FORECASTS</b></p></div>
         <div id="Safety" onclick="sButton()"><p><b>SAFETY</b></p></div>
-        <div class="settingsMenu" onclick="openSettings()"><p><b>SETTINGS</b></p></div>
+        <div id="settingsMenu" onclick="openSettings()"><p><b>SETTINGS</b></p></div>
       </div>
 
       <div class="contentDiv">
-        <div id="boxContainer">
-          </div>
-        </div>
+        <div id="boxContainer"></div>
+      </div>
     </section>
     
     <div class="footerDiv">
