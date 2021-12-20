@@ -21,5 +21,5 @@ World Weather website using HTML/CSS/JS/JQ and OpenWeather API.
 # Future Enhancements
 - Ability to remove two default cities (Houston, California).
 - Ability to rearrange cities (modularity).
-~~- Ability to add your "current location" as a option.~~ (ADDED)
+- ~~Ability to add your "current location" as a option.~~ (ADDED)
 - Design improvements.
