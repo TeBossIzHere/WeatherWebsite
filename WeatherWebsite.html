@@ -11,19 +11,16 @@
 	<title>Weather Data Website</title>
 
 	<link href="/WeatherWebsite.css" rel="stylesheet" type="text/css" />
-	<script src="./WeatherWebsite.js" defer>
-
-	</script>
-	<script src="https://code.jquery.com/jquery-3.5.0.js">
-
-	</script>
+	<script src="./WeatherWebsite.js" defer></script>
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 </head>
 
 <body>
 
 	<div class="headerDiv">
 		<img  id="imgHeader"src="https://i.imgur.com/gSxkIpJ_d.webp?maxwidth=760&fidelity=grand" id="earthImgHeader">
-      <h1 id="titleHeader">WEATHER</h1>
+      <h1 id="titleHeader" onclick="getLocation()">WEATHER</h1>
   </div>
 
   <div id ="Settings">
@@ -37,7 +34,8 @@
         <input id="newCityInput" placeholder='City or Country Name' style="color:black;"></input>
         <button id="addCityButton" onclick="addCityFunction()">Add Place</button>
       </div>
-      <button id="clearCache" onclick="clearCacheFunction()">Clear Cache</button>
+      <button id="currentLocation" onclick="addCurrentLocation()">Add Current Location</button>
+      <button id="clearCache" onclick="clearCacheFunction()">Clear All</button>
     </div>
   </div>
 
