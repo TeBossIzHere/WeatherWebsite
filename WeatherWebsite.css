@@ -187,6 +187,10 @@ body {
   right:25px;
   height:55%;
   width:40px;
+  max-height: 50px;
+  max-width: 50px;
+  min-width: 50px;
+  min-height: 50px;
 }
 
 #gitHubImg {
@@ -195,6 +199,10 @@ body {
   right:80px;
   width:50px;
   height:70%;
+  max-height: 68px;
+  max-width: 60px;
+  min-width: 60px;
+  min-height: 68px;
   }
 
 #Settings {
