@@ -2,6 +2,9 @@ function linkedinButton() {
   window.open("https://www.linkedin.com/in/muzaffer-ozen/", "_blank").focus();
 }
 
+function gitHubButton() {
+  window.open("https://github.com/TeBossIzHere/WeatherWebsite", "_blank").focus();
+}
 function wcButton() {
   window.open("https://weather.com/", "_blank").focus();
 }
@@ -62,7 +65,7 @@ createSite();
 // _______________________________________________________________________________
 
 function clearCacheFunction() {
-  let boxNames = ["Houston", "California"];
+  let boxNames = ["Houston", "San Francisco"];
   localStorage.setItem("boxcount", "2");
   localStorage.setItem("boxnames", JSON.stringify(boxNames));
   document.location.reload(true);
