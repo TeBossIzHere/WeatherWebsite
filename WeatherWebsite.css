@@ -65,6 +65,20 @@ body {
   width: 100%;
 }
 
+#currentLocation {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  padding:10px;
+  background-color:#468faf;
+  color:#caf0f8;
+  border:none;
+  height: 50px;
+  margin: 5px;
+  margin-left:0;
+  width: 100%;
+}
+
 #addCityButton {
   padding:10px;
   background-color:#468faf;
