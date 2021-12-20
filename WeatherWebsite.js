@@ -64,9 +64,17 @@ createSite();
 
 // _______________________________________________________________________________
 
+// Current Location request
+// localStorage.setItem("currentlocationused", "false");
+// console.log(localStorage.getItem("currentlocationused"));
+if (localStorage.getItem("currentlocationused") === null || localStorage.getItem("currentlocationused") === "false") {
+  addCurrentLocation();
+}
+// _______________________________________________________________________________
+
 function clearCacheFunction() {
-  let boxNames = ["Houston", "San Francisco"];
-  localStorage.setItem("boxcount", "2");
+  let boxNames = [];
+  localStorage.setItem("boxcount", "0");
   localStorage.setItem("boxnames", JSON.stringify(boxNames));
   document.location.reload(true);
 }
@@ -78,6 +86,23 @@ function addCityFunction() {
   localStorage.setItem("boxcount", boxCount.toString());
   localStorage.setItem("boxnames", JSON.stringify(boxNames));
   document.location.reload(true);
+}
+
+function addCurrentLocation() {
+  $.ajax({
+    url: "https://geolocation-db.com/jsonp",
+    jsonpCallback: "callback",
+    dataType: "jsonp",
+    success: function (location) {
+      boxCount = parseInt(localStorage.getItem("boxcount"));
+      boxCount = boxCount + 1;
+      boxNames[boxCount - 1] = location.city;
+      localStorage.setItem("boxcount", boxCount.toString());
+      localStorage.setItem("boxnames", JSON.stringify(boxNames));
+      localStorage.setItem("currentlocationused", "true");
+      document.location.reload(true);
+    }
+  });
 }
 
 //Make it so if its night time the linear gradient for background is darker, and lighter for day time.
@@ -120,7 +145,7 @@ async function createSite() {
           "background-size": "cover",
           "flex-direction": "column",
           "height": "35vh",
-          "padding" : "10px",
+          "padding": "10px",
         });
         // $("#box" + i + "").insertBefore('#boxContainer #addNewCity');
       });
