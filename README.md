@@ -16,7 +16,7 @@ World Weather website using HTML/CSS/JS/JQ and OpenWeather API.
 # Getting Started
 - Locate "SETTINGS" to add/remove cities.
 - Locate "SETTINGS" to change unit from Imperial/Metric.
-- https://www.muzafferozen.com/weatherwebsite
+- https://www.muzafferozen.com/weatherwebsite/weatherwebsite
 
 # Future Enhancements
 - Ability to remove two default cities (Houston, California).
